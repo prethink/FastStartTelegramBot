@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Helpers\Controls\" />
     <Folder Include="Uploads\Users\" />
   </ItemGroup>
 

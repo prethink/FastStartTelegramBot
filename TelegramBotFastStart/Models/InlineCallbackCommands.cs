@@ -11,20 +11,15 @@ namespace TelegramBotFastStart.Models
     {
         [Description("None")]
         None = 594,
-        [Description("SetCurrentBook")]
-        SetCurrentBook,
-        BookChangeChapter,
-        BookChangePage,
-        BookNotify,
-        MyBookNext,
-        MyBookPrev,
-        MyBookRead,
-        BookNotifyChangeState,
-        BookNotifyBack,
-        MyBookDelete,
-        BookSelectChapter,
-        BookChangeChapterHandler,
-        BookChangeRepeatTime,
-        MyBookDownload,
+        [Description("PickMonth")]
+        PickMonth,
+        [Description("PickYear")]
+        PickYear,
+        [Description("ChangeTo")]
+        ChangeTo,
+        [Description("YearMonthPicker")]
+        YearMonthPicker,
+        [Description("PickDate")]
+        PickDate,
     }
 }
