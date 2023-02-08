@@ -2,14 +2,9 @@
 using TelegramBotFastStart.Commands.Common;
 using TelegramBotFastStart.Helpers;
 using TelegramBotFastStart.Helpers.Extensions;
-using TelegramBotFastStart.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Telegram.Bot;
 using Telegram.Bot.Types;
+
 
 namespace TelegramBotFastStart.Commands
 {
@@ -50,6 +45,10 @@ namespace TelegramBotFastStart.Commands
                 {
                     message = "Главное меню";
                 }
+
+                var option = new OptionMessage();
+                option.MenuReplyKeyboardMarkup = MenuGenerator.ReplyKeyboard(1, new List<string>(), true, Router.GetValueButton(nameof(Router.BT_MAIN_MENU)));
+                await Common.Message.Send(botClient, telegramId, message, option);
             }
             catch (Exception ex)
             {

@@ -10,8 +10,8 @@ namespace TelegramBotFastStart.Models.CallbackCommands
     public class CallbackBaseCommand
     {
         [JsonProperty("0")]
-        public InlineCallbackCommands LastCommand { get; set; }
-        public CallbackBaseCommand(InlineCallbackCommands data = InlineCallbackCommands.None)
+        public InlineCallback LastCommand { get; set; }
+        public CallbackBaseCommand(InlineCallback data = InlineCallback.None)
         {
             LastCommand = data;
         }

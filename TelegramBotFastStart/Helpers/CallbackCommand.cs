@@ -15,7 +15,7 @@ namespace TelegramBotFastStart.Helpers
         [JsonProperty("d")]
         public T Data { get; set; }
         [JsonConstructor]
-        public InlineCallbackCommand(string buttonName, InlineCallbackCommands commandType, T data) : base(buttonName, commandType, data)
+        public InlineCallbackCommand(string buttonName, InlineCallback commandType, T data) : base(buttonName, commandType, data)
         {
             ButtonName = buttonName;
             CommandType = commandType;
@@ -58,18 +58,18 @@ namespace TelegramBotFastStart.Helpers
         [JsonIgnore]
         public string ButtonName { get; set; }
         [JsonProperty("c")]
-        public InlineCallbackCommands CommandType { get; set; }
+        public InlineCallback CommandType { get; set; }
         [JsonProperty("d")]
         public CallbackBaseCommand Data { get; set; }
         [JsonConstructor]
-        public InlineCallbackCommand(string buttonName, InlineCallbackCommands commandType, CallbackBaseCommand data)
+        public InlineCallbackCommand(string buttonName, InlineCallback commandType, CallbackBaseCommand data)
         {
             ButtonName = buttonName;
             CommandType = commandType;
             Data = data;
         }
 
-        public InlineCallbackCommand(string buttonName, InlineCallbackCommands commandType)
+        public InlineCallbackCommand(string buttonName, InlineCallback commandType)
         {
             ButtonName = buttonName;
             CommandType = commandType;

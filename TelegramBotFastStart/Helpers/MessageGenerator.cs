@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TelegramBotFastStart.Helpers
 {
-    public static class MessageGenerator
+    public static class TextGenerator
     {
         const string Digits = "0123456789";
         const string Alphabet = "abcdefghijklmnopqrstuvwxyz";
@@ -45,6 +45,25 @@ namespace TelegramBotFastStart.Helpers
                 resultPassword.Append(passwordCharSet[random.Next(0, passwordCharSet.Length)]);
             }
             return resultPassword.ToString();
+        }
+
+        public static string CouponGenerate(DateTime date, int segmentLength = 6, int countSplit = 1)
+        {
+            var random = new Random((int)date.Ticks);
+            var couponCharSet = Alphabet.ToUpper() + Digits;
+            var result = new StringBuilder();
+
+            for (int i = 0; i < countSplit + 1; i++)
+            {
+                for (int j = 0; j < segmentLength; j++)
+                {
+                    result.Append(couponCharSet[random.Next(0, couponCharSet.Length)]);
+                }
+                if (i < countSplit)
+                    result.Append('-');
+            }
+
+            return result.ToString();
         }
 
         public static string GetRefLink(long telegramId, bool copy = false)

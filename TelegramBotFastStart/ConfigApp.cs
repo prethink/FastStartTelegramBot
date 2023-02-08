@@ -56,7 +56,6 @@ namespace TelegramBotFastStart
     public class TelegramConfig
     {
         public string Token { get; set; }
-        public string CountryAPI { get; set; }
     }
 
     public class DatabaseConfig
@@ -68,42 +67,10 @@ namespace TelegramBotFastStart
         public string Password { get; set; }
     }
 
-    public class ContactConfig
-    {
-        public string Support { get; set; }
-        public string WantPhotoBattle { get; set; }
-        public long PhotoBattleId { get; set; }
-    }
-
-
-    class AccessConfig
-    {
-        public List<long> RequireGroupPhotoBattle { get; set; }
-    }
-
     class SettingsConfig
     {
-        public int RegisterCoins { get; set; }
-        public int RegisterCoinsByRefferal { get; set; }
-        public int RefferalCoins { get; set; }
         public bool ShowNotifyRegisterUserForAdmin { get; set; }
-        public long ShowAdvertisingSteps { get; set; }
-        public int ShowTimeAdvertising { get; set; }
-        public long MaxTags { get; set; }
-        public long MaxPhoto { get; set; }
-        public long MaxReportForDay { get; set; }
-        public int WordLength { get; set; }
-        public int BonusAmountDay { get; set; }
-        public int AddRatingForLike { get; set; }
         public List<long> Admins { get; set; }
-        public long VIPOneDay { get; set; }
-        public long VIPOneWeek { get; set; }
-        public long VIPOneMonth { get; set; }
-        public long VIPOneForever { get; set; }
-        public long AgeSearch { get; set; }
-        public long PhotoBattlePointByReg { get; set; }
-        public long PhotoBattleWinRating { get; set; }
-        public long PhotoBattleWinActivity { get; set; }
     }
 
     class CustomSettings

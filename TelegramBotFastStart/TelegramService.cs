@@ -19,12 +19,8 @@ namespace TelegramBotFastStart
             Server,
             [Description("BlockedBot")]
             BlockedBot,
-            [Description("CountyAPI")]
-            CountyAPI,
             [Description("CommandExecute")]
             CommandExecute,
-            [Description("NextUser")]
-            NextUser,
             [Description("GroupAction")]
             GroupAction,
         }

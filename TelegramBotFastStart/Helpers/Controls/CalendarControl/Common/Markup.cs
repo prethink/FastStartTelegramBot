@@ -31,12 +31,12 @@ namespace CalendarPicker.CalendarControl
             {
                 new InlineKeyboardButton[]
                 {
-                    MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(date.ToString("MMMM", dtfi), InlineCallbackCommands.PickMonth, new CallendarCommand(date))),
-                    MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(date.ToString("yyyy", dtfi), InlineCallbackCommands.PickYear, new CallendarCommand(date)))
+                    MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(date.ToString("MMMM", dtfi), InlineCallback.PickMonth, new CallendarCommand(date))),
+                    MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(date.ToString("yyyy", dtfi), InlineCallback.PickYear, new CallendarCommand(date)))
                 },
                 new InlineKeyboardButton[]
                 {
-                    MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>("<<", InlineCallbackCommands.ChangeTo, new CallendarCommand(date))),
+                    MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>("<<", InlineCallback.ChangeTo, new CallendarCommand(date))),
                     " "
                 }
             };
@@ -55,7 +55,7 @@ namespace CalendarPicker.CalendarControl
                 {
                     var day = new DateTime(date.Year, month + 1, 1);
 
-                    keyboardRow[j] = MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(dtfi.MonthNames[month], InlineCallbackCommands.YearMonthPicker, new CallendarCommand(day)));
+                    keyboardRow[j] = MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(dtfi.MonthNames[month], InlineCallback.YearMonthPicker, new CallendarCommand(day)));
                 }
 
                 keyboardRows[row] = keyboardRow;
@@ -77,7 +77,7 @@ namespace CalendarPicker.CalendarControl
                 for (var j = 0; j < 3; j++, i++)
                 {
                     var day = startYear.AddYears(i);
-                    keyboardRow[j] = MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(day.ToString("yyyy", dtfi), InlineCallbackCommands.YearMonthPicker, new CallendarCommand(day)));
+                    keyboardRow[j] = MenuGenerator.GetInlineButton(new InlineCallbackCommand<CallendarCommand>(day.ToString("yyyy", dtfi), InlineCallback.YearMonthPicker, new CallendarCommand(day)));
                 }
 
                 keyboardRows[row] = keyboardRow;

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TelegramBotFastStart.Models
 {
-    public enum InlineCallbackCommands : ushort
+    public enum InlineCallback : ushort
     {
         [Description("None")]
         None = 594,
@@ -21,5 +21,21 @@ namespace TelegramBotFastStart.Models
         YearMonthPicker,
         [Description("PickDate")]
         PickDate,
+        [Description("NextPage")]
+        NextPage,
+        [Description("CurrentPage")]
+        CurrentPage,
+        [Description("PreviousPage")]
+        PreviousPage,
+        [Description("GetFreeVIP")]
+        GetFreeVIP,
+        [Description("GetVipOneDay")]
+        GetVipOneDay,
+        [Description("GetVipOneWeek")]
+        GetVipOneWeek,
+        [Description("GetVipOneMonth")]
+        GetVipOneMonth,
+        [Description("GetVipOneForever")]
+        GetVipOneForever,
     }
 }

@@ -26,6 +26,27 @@ namespace TelegramBotFastStart.Helpers
 
             return result;
         }
+
+        //Для EntityFramework 
+
+        //public static PagedResult<T> GetPaged<T>(this IQueryable<T> query,
+        //                                         int page, int pageSize) where T : class
+        //{
+        //    var result = new PagedResult<T>();
+        //    result.CurrentPage = page;
+        //    result.PageSize = pageSize;
+        //    result.RowCount = query.Count();
+
+
+        //    var pageCount = (double)result.RowCount / pageSize;
+        //    result.PageCount = (int)Math.Ceiling(pageCount);
+
+        //    var skip = (page - 1) * pageSize;
+        //    result.Query = query.Skip(skip).Take(pageSize);
+        //    result.Results = result.Query.ToList();
+
+        //    return result;
+        //}
     }
 
     public abstract class PagedResultBase

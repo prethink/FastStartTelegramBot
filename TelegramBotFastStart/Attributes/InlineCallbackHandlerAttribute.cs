@@ -9,9 +9,9 @@ namespace TelegramBotFastStart.Attributes
 {
     internal class InlineCallbackHandlerAttribute : Attribute
     {
-        public List<InlineCallbackCommands> Commands { get; set; }
+        public List<InlineCallback> Commands { get; set; }
 
-        public InlineCallbackHandlerAttribute(params InlineCallbackCommands[] commands)
+        public InlineCallbackHandlerAttribute(params InlineCallback[] commands)
         {
             Commands = commands.ToList();
         }

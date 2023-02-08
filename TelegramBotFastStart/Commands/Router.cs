@@ -72,7 +72,7 @@ namespace TelegramBotFastStart.Commands
         private Dictionary<string, MessageCommand> messageCommands;
         private Dictionary<string, MessageCommand> meetCommands;
         private Dictionary<string, MessageCommand> messageCommandsPriority;
-        private Dictionary<InlineCallbackCommands, MessageCommand> inlineCommands;
+        private Dictionary<InlineCallback, MessageCommand> inlineCommands;
 
         public Router(ITelegramBotClient botClient)
         {
@@ -80,7 +80,7 @@ namespace TelegramBotFastStart.Commands
             messageCommands             = new Dictionary<string, MessageCommand>();
             meetCommands                = new Dictionary<string, MessageCommand>();
             messageCommandsPriority     = new Dictionary<string, MessageCommand>();
-            inlineCommands              = new Dictionary<InlineCallbackCommands, MessageCommand>();
+            inlineCommands              = new Dictionary<InlineCallback, MessageCommand>();
             slashCommands               = new Dictionary<string, MessageCommand>();
             RegisterCommnad();
         }
