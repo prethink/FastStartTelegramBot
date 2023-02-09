@@ -71,6 +71,7 @@ namespace TelegramBotFastStart
     {
         public bool ShowNotifyRegisterUserForAdmin { get; set; }
         public List<long> Admins { get; set; }
+        public int WordLength { get; set; }
     }
 
     class CustomSettings
